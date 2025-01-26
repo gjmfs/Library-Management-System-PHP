@@ -38,6 +38,9 @@ if(!isset($_SESSION['admin'])){
     ?>
 </head>
 <body>
+    <?php
+        include "./nav.php";
+    ?>
     <div class="container">
     <form action='./add.php' method="POST">
         <h2 class="text-center mt-3 mb-3"> Resource</h2>

@@ -16,6 +16,9 @@ if(!isset($_SESSION['admin'])){
     <script src="../../bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <body class="bg-dark">
+    <?php
+        include "./nav.php";
+    ?>
     <div class="index container">
     <div class=" row">
             <a href="./add.php" class="col">Add New Resource</a>

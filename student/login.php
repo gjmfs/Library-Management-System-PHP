@@ -2,10 +2,10 @@
 
 include "../config.php";
 if(isset($_POST['submit'])){
-    $adminUserName = $_POST["username"];
-    $adminPassword = $_POST["password"];
+    $username = $_POST["username"];
+    $password = $_POST["password"];
 
-    $query = "SELECT * FROM admin WHERE username='$adminUserName' AND password='$adminPassword'";
+    $query = "SELECT * FROM student WHERE name='$username' AND password='$password'";
     $result = $connection->query($query);
 
     if($result->num_rows > 0){
@@ -13,7 +13,8 @@ if(isset($_POST['submit'])){
         session_start(); 
         $_SESSION['isLoggedIn'] = true; // Or any other appropriate session variable name
         while($row = $result->fetch_assoc()) {
-            $_SESSION['admin']=$row['username'];
+            $_SESSION['student']=$row['name'];
+            $_SESSION['stu-id']=$row['s_id'];
             
         }
         header("Location: home.php"); 
@@ -29,7 +30,7 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Login</title>
+    <title>Student Login</title>
     <link rel="stylesheet" href="../bootstrap//dist//css/bootstrap.css">
     <script src="../bootstrap//dist/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../CSS//form.css">
@@ -38,7 +39,7 @@ if(isset($_POST['submit'])){
     <div class="form container">
         <div class="row row-cols-1 p-3">
             <form action="./login.php" method="post">
-            <h2>Admin Login</h2>
+            <h2>Student Login</h2>
             <div class="col" >
                 <label for="user_name">User Name:</label> <br>
                 <input type="text" required class="rounded" name="username">

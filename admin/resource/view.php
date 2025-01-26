@@ -17,7 +17,7 @@ if(!isset($_SESSION['admin'])){
 <body>
 
     <?php
-        
+        include "./nav.php";
         include '../../config.php';
 
         $sql= 'select * from resource';

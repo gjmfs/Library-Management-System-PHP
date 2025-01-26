@@ -15,7 +15,9 @@ if(!isset($_SESSION['admin'])){
     <link rel="stylesheet" href="../CSS/index.css">
 </head>
 <body class="bg-dark">
-    
+    <?php
+    include "./nav.php";
+    ?>
     <div class="index container">
     <div class=" row">
             <a href="./user/menu.php" class="col">Student</a>
