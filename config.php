@@ -8,7 +8,7 @@
     if(!$connection){
         die ("Database connection error");
     }else{
-        echo "connection success";
+        
     }
 
     
