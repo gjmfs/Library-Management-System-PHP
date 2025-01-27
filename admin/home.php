@@ -22,6 +22,7 @@ if(!isset($_SESSION['admin'])){
     <div class=" row">
             <a href="./user/menu.php" class="col">Student</a>
             <a href="./resource/menu.php" class="col">Resources</a>
+            <a href="./pre-order/request.php" class="col">Requests</a>
         </div>
     </div>
 </body>

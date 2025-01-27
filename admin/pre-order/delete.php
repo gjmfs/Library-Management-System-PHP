@@ -13,7 +13,7 @@ if (isset($_POST['delete'])) {
     $sql="select * from admin where username='$username' ";
     $check=$connection->query($sql);
     if($check->num_rows>0){
-        $resut= $connection->query("DELETE FROM resource WHERE id = '$id'");
+        $resut= $connection->query("DELETE FROM pre_order WHERE req_id = '$id'");
     }else{
         echo "You're not logged in yet";
     }
@@ -24,6 +24,6 @@ if (isset($_POST['delete'])) {
 $connection->close();
 
 // Redirect back to the main page
-header("Location: ./menu.php");
+header("Location: ./request.php");
 exit();
 ?>

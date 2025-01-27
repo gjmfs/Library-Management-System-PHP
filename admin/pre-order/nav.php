@@ -15,8 +15,8 @@
         </label>
         
         <a href="../resource/menu.php">Resource</a>
-        <a href="./menu.php">Student</a>
-        <a href="../pre-order/request.php">Pre-Orders</a>
+        <a href="../user/menu.php">Student</a>
+        <a href="./request.php">Pre-Orders</a>
         <a href="../logout.php">
           <img class='logout' src="../../assets/icons/Nav/logout.svg" alt="logout">
         </a>
